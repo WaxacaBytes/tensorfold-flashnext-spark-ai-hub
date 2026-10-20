@@ -20,7 +20,6 @@ this repo builds it once, in CI, so the Hub's recipes pull it.
 | Hub recipe | Checkpoint |
 |---|---|
 | `tensorfold-qwen38-flash-next-nvfp4` | [`nvidia/Qwen3.8-Flash-Next-FP4-Local`](https://huggingface.co/nvidia/Qwen3.8-Flash-Next-FP4-Local), NVIDIA's quantization-aware-distilled FP4 (Mia's default) |
-| `tensorfold-qwen38-flash-next-int4-autoround` | [`azampatti/Qwen3.8-Flash-Next-125B-A5B-INT4-AutoRound`](https://huggingface.co/azampatti/Qwen3.8-Flash-Next-125B-A5B-INT4-AutoRound) (Mia's `CHECKPOINT=int4`) |
 
 Serve it the way Mia's `start.sh` does: `tensorfold-native serve <checkpoint dir> --name … --context 262144 --parallel 5
 --kv-dtype fp8 --vision …` with the `TF_FLASHNEXT_*` / `TENSORFOLD_*` settings from their `scripts/config.sh`.
